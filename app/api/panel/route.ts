@@ -9,7 +9,7 @@ function getOrCreateSubjectCookie() {
   let sub = verifySession(token || "")?.sub;
   if (!sub) {
     sub = require('crypto').randomUUID();
-    token = signSession(sub);
+    token = signSession(sub as string);
     jar.set("sid", token, { httpOnly: true, sameSite: "lax", secure: false, path: "/", maxAge: 60*60*24*90 });
   }
   return sub;
