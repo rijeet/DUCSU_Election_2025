@@ -1,7 +1,7 @@
 {
   "build": {
     "env": {
-      "MONGODB_DB": "ducsu2025"
+      "MONGODB_DB": "ducsu"
     }
   },
   "functions": {
